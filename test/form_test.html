@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form</title>
+</head>
+<body>
+<form action="#" method="get">
+    First Name: <br>
+    <input type="text" name="firstname" value="Mickey">
+    <br>
+    Last Name: <br>
+    <input type="text" name="lastname" value="Mouse">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+<form action="http://bing.com.vn/search">
+    <input type="text" name="q" />
+    <input type="submit" value="Tìm Kiếm"/>
+</form>
+
+
+<form>
+    <fieldset>
+        <legend> Personal Information</legend>
+        First Name: <br>
+        <input type="text" name="firstname" value="Mickey">
+        <br>
+        Last Name: <br>
+        <input type="text" name="lastname" value="Mouse">
+    </fieldset>
+</form>
+
+
+<form action="#" method="post">
+    <fieldset>
+        <legend>Hobby</legend> <br>
+        <label> <input name="hobby" value="Travel" type="checkbox"> Travel</label><br>
+        <label> <input name="hobby" value="Sport" type="checkbox"> Sport</label><br>
+        <label> <input name="hobby" value="Cooking" type="checkbox"> Cooking</label><br>
+    </fieldset>
+</form>
+
+
+<form action="#" method="post">
+    <fieldset>
+        <legend>Hobby</legend>
+        <label> <input name="hobby" value="Travel" type="radio"> Travel</label><br>
+        <label> <input name="hobby" value="Travel" type="radio"> Sport</label><br>
+        <label> <input name="hobby" value="Travel" type="radio"> Cooking</label><br>
+        <input type="reset" value="Reset">
+    </fieldset>
+</form>
+
+
+<form method="post">
+    <input name="secret" value="abcg124faasfjh149dfd" type="hidden"/>
+    Account: <input name="account" value="admin" type="text"/><br/>
+    Sở thích:<br/>
+    <input id="dl" name="hobby" value="travel" type="radio"/> <label for="dl"> Du lịch </label><br/>
+    <input id="tt" name="hobby" value="sport" type="radio"/> <label for="tt"> Thể Thao </label><br/>
+    <input id="na" name="hobby" value="cooking" type="radio"/> <label for="na"> Nấu ăn </label><br/>
+    <input type="submit" value="Send data"/>
+    <input name="button" type="button" value="button">
+</form>
+
+
+</body>
+</html>
