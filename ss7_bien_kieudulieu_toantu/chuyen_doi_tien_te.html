@@ -15,21 +15,42 @@
         <td></td>
     </tr>
     <tr>
-        <td><input type="text"></td>
+        <td><input type="text" id="amount"></td>
         <td></td>
-        <td><select name="currency" style="padding: 1px ">;
+        <td><select id="from" name="currency" style="padding: 1px ">
             <option value="">VND</option>;
             <option value="">USD</option>;
         </select>
         </td>
         <td></td>
-        <td><select name="currency" style="padding: 1px">
-            <option value="Dong">VND</option>;
+        <td><select id="to" name="currency" style="padding: 1px">
+            <option value="VND">VND</option>;
             <option value="USD">USD</option>;
         </select>
         </td>
-        <td><button>Convert</button></td>
+        <td><button onclick="convert()">Convert</button></td>
     </tr>
 </table>
+
+    <p id="show"></p>
+    <script>
+        function convert(){
+            let x = document.getElementById("amount").value;
+            let y = document.getElementById("from").value;
+            let z = document.getElementById("to").value;
+            let usdvnd = x*23000;
+            let vndusd = x/23000;
+            if(y=="USD" && z=="VND"){
+                document.getElementById("show").innerText= x + "USD = "+ usdvnd + "VND";
+            }
+            else if (y == "VND" && z == "USD") {
+                document.getElementById('show').innerText = x + " VND = " + vndusd + " USD"
+            }
+            else {
+                alert('2 Loại tiền tệ giống nhau!!!')
+            }
+        }
+
+    </script>
 </body>
 </html>
