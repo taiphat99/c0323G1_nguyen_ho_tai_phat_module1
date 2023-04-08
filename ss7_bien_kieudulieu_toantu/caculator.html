@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<input id="number 1" type="text">
+<input id="number 2" type="text"> <br>
+<button id="add" onclick="add()">Addition</button>
+<button id="sub" onclick="sub()" >Subtraction</button>
+<button id="multi" onclick="multi">Multiplication</button>
+<button id="div" onclick="div">Division</button>
+<p id="Result"></p>
+<script>
+function add() {
+    let a1 = document.getElementById("number 1").value;
+    let a2 = document.getElementById("number 2").value;
+    let add1 = +a1 + +a2;
+    document.getElementById("Result").innerText = "Result = " + add1;
+}
+function sub() {
+    let s1 = document.getElementById("number 1").value;
+    let s2 = document.getElementById("number 2").value;
+    let sub1 = +s1 - +s2;
+    document.getElementById("Result").innerText = "Result = " + sub1;
+}
+function multi() {
+    let m1 = document.getElementById("number 1").value;
+    let m2 = document.getElementById("number 2").value;
+    let multi1 = +m1 * +m2;
+    document.getElementById("Result").innerText = "Result = " + multi1;
+}
+function div() {
+    let d1 = document.getElementById("number 1").value;
+    let d2 = document.getElementById("number 2").value;
+    let div1 = +d1 / +d2;
+    document.getElementById("Result").innerText = "Result = " + div1;
+}
+</script>
+</body>
+</html>
