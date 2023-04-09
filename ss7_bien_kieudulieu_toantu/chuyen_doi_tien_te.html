@@ -15,11 +15,11 @@
         <td></td>
     </tr>
     <tr>
-        <td><input type="text" id="amount"></td>
+        <td><input type="number" name="number" id="amount"></td>
         <td></td>
         <td><select id="from" name="from" style="padding: 1px ">
-            <option value="">VND</option>;
-            <option value="">USD</option>;
+            <option value="VND">VND</option>;
+            <option value="USD">USD</option>;
         </select>
         </td>
         <td></td>
@@ -38,17 +38,17 @@
             let x = document.getElementById("amount").value;
             let y = document.getElementById("from").value;
             let z = document.getElementById("to").value;
-            let usdvnd = x*23000;
-            let vndusd = x/23000;
+            let usdvnd = x * 23000;
+            let vndusd = x / 23000;
             if(y=="USD" && z=="VND"){
-                document.getElementById("show").innerText= x + "USD = "+ usdvnd + "VND";
+                document.getElementById("show").innerText= x + " USD = "+ usdvnd + " VND ";
             }
             else if (y == "VND" && z == "USD") {
-                document.getElementById('show').innerText = x + " VND = " + vndusd + " USD"
+                document.getElementById('show').innerText = x + " VND = " + vndusd + " USD "
             }
-            else {
-                alert('2 Loại tiền tệ giống nhau!!!')
-            }
+             else {
+                 alert('2 Loại tiền tệ giống nhau!!!')
+             }
         }
 
     </script>
