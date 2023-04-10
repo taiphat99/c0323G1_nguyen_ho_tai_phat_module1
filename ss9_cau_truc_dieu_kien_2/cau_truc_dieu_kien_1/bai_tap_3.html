@@ -10,12 +10,19 @@ Vui lòng nhập số vào đây:
 <button onclick="ketQua()">Kết Quả</button>
 <p id="result"></p>
 <script>
-    function ketQua(){
+    function ketQua() {
         let number = +document.getElementById("soNguyen").value
-        if (Number.isInteger(number)){
-            if(number > 0) {
-                document.getElementById("result").innerHTML=number + "Là số nguyên lớn hơn 0"
-            } else
+        if (Number.isInteger(number)) {
+            if (number > 0) {
+                document.getElementById("result").innerHTML = number + " là số nguyên lớn hơn 0"
+            } else if (number < 0) {
+                document.getElementById("result").innerHTML = number + " là số nguyên bé hơn 0"
+            } else {
+                document.getElementById("result").innerHTML = number + " là số nguyên"
+
+            }
+        } else {
+            document.getElementById("result").innerHTML = number + " không phải là số nguyên"
         }
     }
 </script>
