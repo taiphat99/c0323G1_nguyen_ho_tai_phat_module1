@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Commission</title>
+</head>
+<body>
+Vui lòng nhập doanh số đã bán trong tháng (VNĐ) :
+<input type="number" id="number">
+<button onclick="ketQua()"> Kết Quả</button>
+<p id="result"></p>
+<script>
+    function ketQua(){
+        let a = document.getElementById("number").value
+        let commission = 0.1*a
+        document.getElementById("result").innerHTML = "Hoa Hồng tháng này là: " + commission + " VNĐ"
+    }
+</script>
+</body>
+</html>

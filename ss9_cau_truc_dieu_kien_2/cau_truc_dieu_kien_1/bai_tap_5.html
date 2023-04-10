@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp Hạng Học Lực</title>
+</head>
+<body>
+Điểm kiểm tra miệng là:
+<input type="number" id="firstTest"> <br><br>
+Điểm kiểm tra giữa kỳ là:
+<input type="number" id="midTest"> <br> <br>
+Điểm kiểm tra cuối kỳ là:
+<input type="number" id="finalTest">
+<button type="button" onclick="ketQua()">Kết Quả</button>
+<br>
+<p id="result"></p>
+<script>
+    function ketQua(){
+        let firstTest = +document.getElementById("firstTest").value
+        let midTest = +document.getElementById("midTest").value
+        let finalTest = +document.getElementById("finalTest").value
+        average = firstTest*0.15 + midTest*0.35 + finalTest*0.5
+        if (average >= 8){
+            document.getElementById("result").innerText = "=) Học Sinh Giỏi"
+        } else if (average < 8 && average >= 6.5){
+            document.getElementById("result").innerText = "=) Học Sinh Khá"
+        } else {
+            document.getElementById("result").innerText = "=) Học Sinh Trung Bình"
+        }
+    }
+</script>
+</body>
+</html>
