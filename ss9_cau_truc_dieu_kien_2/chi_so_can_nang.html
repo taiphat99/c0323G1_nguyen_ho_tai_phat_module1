@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Chỉ Số Cân Nặng</title>
+</head>
+<body>
+<h2>Tính Chỉ Số Cân Nặng</h2> <br>
+<table></table>
+<tr>
+    <td>Nhập cân nặng (kg):</td>
+    <td><input name="weight" type="number" id="weight"></td>
+</tr>
+<br>
+<br>
+<tr>
+    <td>Nhập chiều cao (m):</td>
+    <td><input name="height" type="number" id="height"></td>
+</tr>
+<br>
+<br>
+<button type="button" onclick="kiemtra()">Kiểm Tra</button>
+<script>
+    function kiemtra() {
+        let weight = document.getElementById("weight").value;
+        let height = document.getElementById("height").value;
+        let chiSoBMI = weight / (height ^ 2);
+        if (chiSoBMI < 18.5) {
+            document.write("Chỉ số BMI của bạn là: " + chiSoBMI + " Underweight");
+        } else if (chiSoBMI < 25) {
+            document.write("Chỉ số BMI của bạn là: " + chiSoBMI + " Normal");
+        } else if (chiSoBMI < 30) {
+            document.write("Chỉ số BMI của bạn là: " + chiSoBMI + " Overweight");
+        } else {
+            document.write("Chỉ số BMI của bạn là: " + chiSoBMI + " Obese")
+        }
+        ;
+    }
+</script>
+
+</body>
+</html>

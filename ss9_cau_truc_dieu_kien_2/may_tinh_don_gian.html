@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính Đơn Giản</title>
+</head>
+<body>
+<h1>Máy Tính Apple</h1>
+<table>
+    <tr>
+        <td colspan="9"><input type="text" name="number" id="number"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button type="button" id="so1" onclick="so1()">1</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" id="so2" onclick="so2()">2</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" id="so3" onclick="so3()">3</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" id="dauCong" onclick="dauCong()">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button type="button" id="so4" onclick="so4()">4</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" id="so5" onclick="so5()">5</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" id="so6" onclick="so6()">6</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" id="dauTru" onclick="dauTru()">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button type="button" id="so7" onclick="so7()">7</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" id="so8" onclick="so8()">8</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" id="so9" onclick="so9()">9</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" id="dauNhan" onclick="dauNhan()">x</button>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button type="button" id="xoaHet" onclick="xoaHet()">C</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" id="so0" onclick="so0()">0</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" id="dauBang" onclick="dauBang()">=</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" id="dauChia" onclick="dauChia()">/</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function so1() {
+        document.getElementById("number").value += 1
+    }
+    function so2() {
+        document.getElementById("number").value += 2
+    }
+    function so3() {
+        document.getElementById("number").value += 3
+    }
+    function so4() {
+        document.getElementById("number").value += 4
+    }
+    function so5() {
+        document.getElementById("number").value += 5
+    }
+    function so6() {
+        document.getElementById("number").value += 6
+    }
+    function so7(){
+        document.getElementById("number").value += 7
+    }
+    function so8(){
+        document.getElementById("number").value += 8
+    }
+    function so9(){
+        document.getElementById("number").value += 9
+    }
+    function so0(){
+        document.getElementById("number").value += 0
+    }
+    function dauCong(){
+        document.getElementById("number").value += "+"
+    }
+    function dauTru(){
+        document.getElementById("number").value += "-"
+    }
+    function dauNhan(){
+        document.getElementById("number").value += "*"
+    }
+    function dauChia(){
+        document.getElementById("number").value += "/"
+    }
+    function xoaHet(){
+        document.getElementById("number").value = " "
+    }
+
+    function dauBang(){
+        let ketQua = document.getElementById("number").value;
+        let result = eval(ketQua);
+        document.getElementById("number").value = result
+    }
+</script>
+</body>
+</html>

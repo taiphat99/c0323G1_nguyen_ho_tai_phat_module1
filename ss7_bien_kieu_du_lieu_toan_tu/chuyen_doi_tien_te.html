@@ -35,16 +35,16 @@
     <p id="show"></p>
     <script>
         function convert(){
-            let x = document.getElementById("amount").value;
-            let y = document.getElementById("from").value;
-            let z = document.getElementById("to").value;
-            let usdvnd = x * 23000;
-            let vndusd = x / 23000;
-            if(y=="USD" && z=="VND"){
-                document.getElementById("show").innerText= x + " USD = "+ usdvnd + " VND ";
+            let soTien = document.getElementById("amount").value;
+            let donVi1 = document.getElementById("from").value;
+            let donVi2 = document.getElementById("to").value;
+            let usdVnd = soTien * 23000;
+            let vndUsd = soTien / 23000;
+            if(donVi1=="USD" && donVi2=="VND"){
+                document.getElementById("show").innerText= soTien + " USD = "+ usdVnd + " VND ";
             }
-            else if (y == "VND" && z == "USD") {
-                document.getElementById('show').innerText = x + " VND = " + vndusd + " USD "
+            else if (donVi1 == "VND" && donVi2 == "USD") {
+                document.getElementById('show').innerText = soTien + " VND = " + vndUsd + " USD "
             }
              else {
                  alert('2 Loại tiền tệ giống nhau!!!')

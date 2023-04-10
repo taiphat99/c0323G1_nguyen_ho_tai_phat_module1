@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<input id="number1" type="number" name="number1">
+<input id="number2" type="number" name="number2"> <br>
+<button id="add" onclick="add()">Addition(+)</button>
+<button id="sub" onclick="sub()" >Subtraction(-)</button>
+<button id="multi" onclick="multi()">Multiplication(*)</button>
+<button id="div" onclick="div()">Division(/)</button>
+<p id="Result"></p>
+<script>
+function add() {
+    let soCong1 = document.getElementById("number1").value;
+    let soCong2 = document.getElementById("number2").value;
+    let tong = +soCong1 + +soCong2;
+    document.getElementById("Result").innerText = "Result = " + tong;
+}
+function sub() {
+    let soTru1 = document.getElementById("number1").value;
+    let soTru2 = document.getElementById("number2").value;
+    let hieu = +soTru1 - +soTru2;
+    document.getElementById("Result").innerText = "Result = " + hieu;
+}
+function multi() {
+    let soNhan1 = document.getElementById("number1").value;
+    let soNhan2 = document.getElementById("number2").value;
+    let tich = +soNhan1 * +soNhan2;
+    document.getElementById("Result").innerText = "Result = " + tich;
+}
+function div() {
+    let soChia1 = document.getElementById("number1").value;
+    let soChia2 = document.getElementById("number2").value;
+    let thuong = +soChia1 / +soChia2;
+    document.getElementById("Result").innerText = "Result = " + thuong;
+}
+</script>
+</body>
+</html>

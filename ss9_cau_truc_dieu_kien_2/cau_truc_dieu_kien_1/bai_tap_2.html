@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Vui lòng nhập số tuổi của học sinh:
+<input type="number" id="soTuoi" name="soTuoi">
+<button onclick="ketQua()">Kết Quả</button>
+<p id="ketQua"></p>
+
+<script>
+    function ketQua(){
+        let x = document.getElementById("soTuoi").value
+        if (x >= 16 && x <= 18){
+            document.getElementById("ketQua").innerHTML = "Học sinh đã đủ tuổi để vào lớp 10"
+        } else {
+            document.getElementById("ketQua").innerHTML = "Học sinh không đủ tuổi để vào lớp 10"
+        }
+    }
+</script>
+</body>
+</html>

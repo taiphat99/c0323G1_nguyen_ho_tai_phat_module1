@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Nhập số a: </td>
+        <td><input type="number" name="number1" id="number1"></td>
+    </tr>
+    <tr>
+        <td>Nhập số b:</td>
+        <td><input type="number" name="number2" id="number2"></td>
+        <td><button type="button" onclick="ketQua()">Kết Quả</button></td>
+    </tr>
+</table>
+<p id="ketQua"></p>
+<script>
+    function ketQua(){
+        let numberA = document.getElementById("number1").value
+        let numberB = document.getElementById("number2").value
+        let x = numberA % numberB
+        if (x == 0) {
+            document.getElementById("ketQua").innerHTML = "A chia hết cho B"
+        }
+            else {
+                document.getElementById("ketQua").innerHTML = "A không chia hết cho B"
+
+            }
+    }
+</script>
+</body>
+</html>
