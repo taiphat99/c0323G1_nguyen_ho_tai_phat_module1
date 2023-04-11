@@ -5,6 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-
+Vui lòng nhập số tuổi của bạn:
+<input type="number" id="soTuoi" name="soTuoi">
+<button onclick="ketQua()">Kết Quả</button>
+<p id="result"></p>
+<script>
+    function ketQua(){
+        let soTuoi = +document.getElementById("soTuoi").value
+        if (Number.isInteger(soTuoi)){
+            if(soTuoi>0 && soTuoi<120){
+                document.getElementById("result").innerHTML = " Đây chính xác là tuổi của Con Người"
+            } else document.getElementById("result").innerHTML = " Đây không phải là tuổi của con Người"
+        } else document.getElementById("result").innerHTML = "Tuổi Con Người bắt buộc phải là 1 số Nguyên. Vui lòng nhập lại!"
+    }
+</script>
 </body>
 </html>
