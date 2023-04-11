@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Kiểm tra 3 cạnh góc vuông</title>
 </head>
 <body>
-
+Nhập cạnh a:
+<input type="number" id="canha"><br><br>
+Nhập cạnh b:
+<input type="number" id="canhb"><br><br>
+Nhập cạnh c:
+<input type="number" id="canhc">
+<button onclick="ketQua()">Kết Quả</button>
+<p id="result"></p>
+<script>
+    function ketQua() {
+        let canha = +document.getElementById('canha').value;
+        let canhb = +document.getElementById('canhb').value;
+        let canhc = +document.getElementById('canhc').value;
+        if (canha > 0 && canhb > 0 && canhc > 0) {
+            if ((canha + canhb) > canhc && (canhb + canhc) > canha && (canha + canhc) > canhb) {
+                document.getElementById('result').innerText = 'Cạnh a (' + canha + '), ' + 'Cạnh b (' + canhb + '), ' + 'Cạnh c (' + canhc + ') là 03 cạnh của 01 tam giác';
+            } else {
+                document.getElementById('result').innerText = 'Cạnh a (' + canha + '), ' + 'Cạnh b (' + canhb + '), ' + 'Cạnh c (' + canhc + ') KHÔNG PHẢI là 03 cạnh của 01 tam giác';
+            }
+        } else {
+            document.getElementById('result').innerText = 'Cạnh a (' + canha + '), ' + 'Cạnh b (' + canhb + '), ' + 'Cạnh c (' + canhc + ') KHÔNG PHẢI là 03 cạnh của 01 tam giác';
+        }
+    }
+</script>
 </body>
 </html>
