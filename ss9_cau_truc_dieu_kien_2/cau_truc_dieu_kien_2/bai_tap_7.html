@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Giải Phương Trình Bậc 2</title>
 </head>
 <body>
+<h2>Giải Phương Trình Bậc 2: ax<sup>2</sup>+ bx + c = 0</h2>
+Nhập a:
+<input type="number" id="soA"><br><br>
+Nhập b:
+<input type="number" id="soB"><br><br>
+Nhập c:
+<input type="number" id="soC">
+<button type="button" onclick="ketQua()">Kết Quả</button>
+<p id="result"></p>
+<script>
+    function ketQua() {
+        let soA = +document.getElementById("soA").value
+        let soB = +document.getElementById("soB").value
+        let soC = +document.getElementById("soC").value
+        let delta = (soB * soB) - (4 * soA * soC)
+        let nghiemKep = (0 - soB) / (2 * soA)
+        let nghiemThu1 = ((0 - soB) + Math.sqrt(delta)) / (2 * soA)
+        let nghiemThu2 = ((0 - soB) - Math.sqrt(delta)) / (2 * soA)
 
+        if (delta == 0) {
+            document.getElementById("result").innerHTML = "Phương trình có 2 nghiệm Kép: x1 = x2 = " + nghiemKep
+        } else if (delta > 0) {
+            document.getElementById("result").innerHTML = "Phương trình có 2 nghiệm: x1 = " + nghiemThu1 + " và x2 = " + nghiemThu2
+        } else {
+            document.getElementById("result").innerHTML = "Phương Trình Vô Nghiệm!"
+        }
+    }
+</script>
 </body>
+
 </html>

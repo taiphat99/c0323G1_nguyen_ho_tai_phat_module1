@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tiền Lãi </title>
 </head>
 <body>
-
+Vui lòng nhập số tiền bạn muốn gửi (VNĐ):
+<input type="number" id="soTienGui"> <br> <br>
+Vui lòng nhập số tháng bạn muốn gửi (Tháng):
+<input type="number" id="soThangGui">
+<button onclick="ketQua()">Kết Quả</button>
+<p id="result"></p>
+<script>
+    function ketQua(){
+        let tienGui = +document.getElementById("soTienGui").value
+        let soThangGui = +document.getElementById("soThangGui").value
+        let laiSuat = 0.0075
+        let tongTien = tienGui*(1+laiSuat)**soThangGui
+        document.getElementById("result").innerHTML = " Tổng Tiền của bạn gửi sau " + soThangGui + " tháng là: " +tongTien
+    }
+</script>
 </body>
 </html>
