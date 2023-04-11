@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Giải Phương Trình Bậc Nhất</title>
 </head>
 <body>
-
+<h2>Giải Phương Trình Bậc 1: ax + b = c</h2>
+<table>
+    <tr>
+        <td style="text-align: center">Nhập a</td>
+        <td></td>
+        <td style="text-align: center">Nhập b</td>
+        <td></td>
+        <td style="text-align: center">Nhập c</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="number" id="soA"></td>
+        <td></td>
+        <td><input type="number" id="soB"></td>
+        <td></td>
+        <td><input type="number" id="soC"></td>
+        <td>
+            <button style="color: white; background-color: darkgoldenrod" onclick="giaiPhuongTrinh()">Giải Phương
+                Trình
+            </button>
+        </td>
+    </tr>
+</table>
+<p id="result"></p>
+<script>
+    function giaiPhuongTrinh() {
+        let soA = +document.getElementById("soA").value
+        let soB = +document.getElementById("soB").value
+        let soC = +document.getElementById("soC").value
+        let bienCanTim = (soC - soB) / soA
+        if (soA == 0) {
+            if (soB != soC) {
+                document.getElementById("result").innerHTML = "Phương Trình " + soA + "x + " + soB + " = " + soC + " vô nghiệm!"
+            } else {
+                document.getElementById("result").innerHTML = "Phương Trình " + soA + "x + " + soB + " = " + soC + " có vô số nghiệm!"
+            }
+        } else {
+            document.getElementById("result").innerHTML = "Phương Trình " + soA + "x + " + soB + " = " + soC + " có nghiệm là: x = " + bienCanTim
+        }
+    }
+</script>
 </body>
 </html>

@@ -5,6 +5,25 @@
     <title>Title</title>
 </head>
 <body>
-
+Vui lòng nhập số điện đã tiêu thụ tháng này của Gia Đình bạn:
+<input type="number" id="soDien" name="soDien">
+<button onclick="ketQua()">Kết Quả</button>
+<p id="result"></p>
+<script>
+    function ketQua(){
+        let soDien = +document.getElementById("soDien").value
+        const giaDien1 = 3800
+        const giaDien2 = 3000
+        let tienDien1 = soDien * giaDien1
+        let tienDien2 = soDien * giaDien2
+        if (soDien >0 && soDien <=1000) {
+            document.getElementById("result").innerHTML = "Tiền điện tháng nay của bạn là: " + tienDien1 + " VNĐ"
+        } else if (soDien >1000){
+            document.getElementById("result").innerHTML = "Tiền điện tháng nay của bạn là: " + tienDien2 + " VNĐ"
+        } else {
+            document.getElementById("result").innerHTML = "Số điện không thể là 1 số âm. Vui lòng nhập lại!"
+        }
+    }
+</script>
 </body>
 </html>

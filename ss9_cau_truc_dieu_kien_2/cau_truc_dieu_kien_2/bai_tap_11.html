@@ -5,6 +5,48 @@
     <title>Title</title>
 </head>
 <body>
-
+Mức 1: Nếu thu nhập của bạn <5 Triệu : 5% <br> <br>
+Mức 2: Nếu thu nhập của bạn 5-10 Triệu: 7% <br> <br>
+Mức 3: Nếu thu nhập của bạn 10-18 Triệu: 9% <br> <br>
+Mức 4: Nếu thu nhập của bạn 18- 32 Triệu: 12% <br> <br>
+Mức 5: Nếu thu nhập của bạn 32-52 Triệu: 19% <br> <br>
+Mức 6: Nếu thu nhập của bạn 52-80 Triệu: 23% <br> <br>
+Mức 7: Nếu thu nhập của bạn >80 Triệu: 30% <br> <br>
+<br>
+<br>
+<br>
+Vui lòng nhập thu nhập của bạn vào đây (VNĐ/Tháng): <br> <br>
+<input type="number" id="thuNhap" name="thuNhap">
+<button onclick="ketQua()" type="button">Kết Quả</button>
+<p id="result"></p>
+<script>
+    function ketQua(){
+        const muc1 = 0.05
+        const muc2 = 0.07
+        const muc3 = 0.09
+        const muc4 = 0.12
+        const muc5 = 0.19
+        const muc6 = 0.23
+        const muc7 = 0.3
+        let thuNhap = +document.getElementById("thuNhap").value
+        if (thuNhap < 5000000 && thuNhap >=0){
+            document.getElementById("result").innerHTML = "Thuế thu nhập của bạn là: " + thuNhap * muc1 + " VNĐ"
+        } else if (thuNhap >=5000000 && thuNhap <10000000) {
+            document.getElementById("result").innerHTML = "Thuế thu nhập của bạn là: " + thuNhap * muc2 + " VNĐ"
+        } else if (thuNhap >=10000000 && thuNhap <18000000){
+            document.getElementById("result").innerHTML = "Thuế thu nhập của bạn là: " + thuNhap * muc3 + " VNĐ"
+        } else if (thuNhap >=18000000 && thuNhap <32000000){
+            document.getElementById("result").innerHTML = "Thuế thu nhập của bạn là: " + thuNhap * muc4 + " VNĐ"
+        } else if (thuNhap >=32000000 && thuNhap <52000000){
+            document.getElementById("result").innerHTML = "Thuế thu nhập của bạn là: " + thuNhap * muc5 + " VNĐ"
+        } else if (thuNhap >=52000000 && thuNhap <80000000){
+            document.getElementById("result").innerHTML = "Thuế thu nhập của bạn là: " + thuNhap * muc6 + " VNĐ"
+        } else if (thuNhap >=80000000){
+            document.getElementById("result").innerHTML = "Thuế thu nhập của bạn là: " + thuNhap * muc7 + " VNĐ"
+        } else {
+            document.getElementById("result").innerHTML = "Thuế thu nhập của bạn bắt buộc phải là 1 số dương. Vui lòng nhập lại!"
+        }
+    }
+</script>
 </body>
 </html>
