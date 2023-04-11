@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Diện Tích Tam Giác Vuông</title>
 </head>
 <body>
-
+Chiều dài cạnh thứ 1 là:
+<input type="number" name="canh1" id="canh1"><br><br>
+Chiều dài cạnh thứ 2 là:
+<input type="number" name="canh2" id="canh2">
+<button type="button" onclick="ketQua()">Kết Quả</button>
+<p id="result"></p>
+<script>
+    function ketQua() {
+        let canh1 = +document.getElementById("canh1").value
+        let canh2 = +document.getElementById("canh2").value
+        let dienTich = (canh1 * canh2) / 2
+        document.getElementById("result").innerHTML = "Diện Tích tam giác vuông là: " + dienTich
+    }
+</script>
 </body>
 </html>
