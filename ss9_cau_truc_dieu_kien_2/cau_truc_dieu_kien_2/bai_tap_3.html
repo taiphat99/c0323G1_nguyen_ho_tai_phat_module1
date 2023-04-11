@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện Tích Hình Vuông</title>
+</head>
+<body>
+<h1>Diện Tích Hình Vuông</h1>
+Vui lòng nhập độ dài cạnh a:
+<input type="number" id="number">
+<button onclick="myFunction()">Kết Quả</button>
+<p id="result"></p>
+<script>
+    function myFunction(){
+        let canhA = +document.getElementById("number").value
+        let dienTich = canhA * canhA
+        document.getElementById("result").innerHTML = "Diện Tích của hình vuông là: " + dienTich
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Chiều dài là:
+<input type="number" name="chieuDai" id="chieuDai"><br><br>
+Chiều rộng là:
+<input type="number" name="chieuRong" id="chieuRong">
+<button type="button" onclick="ketQua()">Kết Quả</button>
+<p id="result"></p>
+<script>
+    function ketQua(){
+        let chieuDai = parseInt(document.getElementById("chieuDai").value)
+        let chieuRong = parseInt(document.getElementById("chieuRong").value)
+        let dienTich = chieuDai * chieuRong
+        document.getElementById("result").innerHTML = "Diện Tích hình chữ nhật là: " + dienTich
+    }
+</script>
+</body>
+</html>
