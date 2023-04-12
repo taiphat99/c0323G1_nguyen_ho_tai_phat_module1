@@ -16,16 +16,16 @@
 <p id="result"></p>
 <script>
     function ketQua(){
-        let firstTest = +document.getElementById("firstTest").value
-        let midTest = +document.getElementById("midTest").value
-        let finalTest = +document.getElementById("finalTest").value
+        let firstTest = +document.getElementById("firstTest").value;
+        let midTest = +document.getElementById("midTest").value;
+        let finalTest = +document.getElementById("finalTest").value;
         average = firstTest*0.15 + midTest*0.35 + finalTest*0.5
         if (average >= 8){
-            document.getElementById("result").innerText = "=) Học Sinh Giỏi"
+            document.getElementById("result").innerText = "=) Học Sinh Giỏi";
         } else if (average < 8 && average >= 6.5){
-            document.getElementById("result").innerText = "=) Học Sinh Khá"
+            document.getElementById("result").innerText = "=) Học Sinh Khá";
         } else {
-            document.getElementById("result").innerText = "=) Học Sinh Trung Bình"
+            document.getElementById("result").innerText = "=) Học Sinh Trung Bình";
         }
     }
 </script>
