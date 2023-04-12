@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài Tập 2</title>
 </head>
 <body>
-
+<script>
+    let a = +prompt("Vui lòng nhập nhiệt độ vào ô này: ");
+    while (a > 100 || a < 20) {
+        if (a > 100) {
+            a = prompt(" Vui lòng giảm nhiệt độ: ");
+        } else {
+            a = prompt("Vui lòng tăng nhiệt độ: ");
+        }
+    } a = alert("Nhiệt độ hiện tại là " + a)
+</script>
 </body>
 </html>
