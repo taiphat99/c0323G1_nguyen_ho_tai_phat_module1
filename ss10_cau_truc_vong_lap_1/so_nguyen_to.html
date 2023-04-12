@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số Nguyên Tố</title>
+</head>
+<body>
+<script>
+    // let soLuongSNT = +prompt("Số lượng số Nguyên Tố bạn muốn in ra: ");
+    //
+    // let dem=0; // đếm số nguyên tố
+    // while (dem<soLuongSNT) { //
+    //
+    //
+    // }
+
+    let n = 0
+    while (n<50) {
+        let count = 0
+        for (let i = 1; i < n; i++) {
+            if (n % i === 0) {
+                count++
+            }
+        }
+        if (count == 1) {
+            document.write(n + " ")
+        }
+        n++
+    }
+
+
+    // let n = +prompt("Nhập số bạn muốn kiểm tra: ")
+    // let count = 0
+    // for (let i = 1;i<n;i++){
+    //     if (n%i === 0){
+    //         count++
+    //     }
+    // }
+    // if (count == 1){
+    //     document.write(n + " là số Nguyên Tố")
+    // } else {
+    //     document.write(n + " không phải là số Nguyên Tố")
+    //
+    // }
+
+</script>
+</body>
+</html>
