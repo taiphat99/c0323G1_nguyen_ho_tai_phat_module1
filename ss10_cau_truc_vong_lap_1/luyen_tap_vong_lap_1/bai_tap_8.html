@@ -2,9 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Trò Chơi Đoán Số</title>
 </head>
 <body>
+<button onclick = "start()">Bắt Đầu Chơi</button>
+<script>
+function start() {
+    let max = +prompt(" Vui lòng nhập giới hạn trên vào đây!");
+    let min = +prompt(" Vui lòng nhập giới hạn dưới vào đây!");
+    let soCanTim = Math.floor(Math.random() * (max - min)) + min;
 
+    let dem = 0
+    while (dem <= 4) {
+        let soNhapVao = +prompt("Vui lòng nhập số bạn nghĩ nó đúng: ");
+        if (soNhapVao > max || soNhapVao < min) {
+            soNhapVao = +prompt("Số bạn đoán nằm ngoài giới hạn! Vui lòng đoán lại!")
+        }
+        if (soNhapVao > soCanTim) {
+            alert("Bé lại xí nữa");
+            dem++;
+        } else if (soNhapVao < soCanTim) {
+            alert("Lớn hơn xí nữa");
+            dem++;
+        } else {
+            alert("You Win. Very Good Jobbbbbb!")
+            break;
+        }
+    }
+    alert("You Lose =))) ")
+}
+
+</script>
 </body>
 </html>

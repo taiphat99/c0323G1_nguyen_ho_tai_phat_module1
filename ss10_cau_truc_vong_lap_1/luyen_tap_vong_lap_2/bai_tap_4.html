@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Test Bien & Kieu Du Lieu</title>
 </head>
 <body>
+<script>
 
+    let width = 35;
+    let height = 8;
+    let str = "";
+    for (let i = 1; i <= height; i++) {
+        if (i === 1 || i === height) {
+            for (let j = 1; j <= width; j++) {
+                str += "*";
+            }
+            str += "<br>";
+        } else {
+            for (let j = 1; j <= width; j++) {
+                if (j === 1 || j === width) {
+                    str += "*";
+                } else {
+                    str += "&nbsp;&nbsp";
+                }
+            }
+            str += "<br>";
+        }
+    }
+    document.write(str);
+
+</script>
 </body>
 </html>
