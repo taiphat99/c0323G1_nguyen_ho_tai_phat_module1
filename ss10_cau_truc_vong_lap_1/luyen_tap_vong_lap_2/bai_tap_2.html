@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài Tập 2</title>
 </head>
 <body>
+<script>
 
+    let giaiThua = 1;
+    let n = +prompt("Vui lòng nhập vào giai thừa bạn muốn tính: ");
+    if (n < 1) {
+        n = +prompt("Số bắt buộc phải dương! Vui lòng nhập lại: ")
+    }
+    for (let i = n; i > 0; i--) {
+        giaiThua *= i;
+    }
+    document.write("Giai thừa của " + n + " là " + n + "! =" + giaiThua);
+</script>
 </body>
 </html>
