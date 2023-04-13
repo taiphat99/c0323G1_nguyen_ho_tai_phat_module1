@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>20 Số Fibonacci đầu tiên</title>
 </head>
 <body>
-
+<script>
+    let number = +prompt("Vui lòng nhập vào số lượng số Fibonacci bạn muốn: ");
+    let n1=0,n2=1,bienTam;
+    for (let i=1 ;i<=number;i++){
+        document.write(n1 + " ");
+        bienTam = n1+n2;
+        n1 = n2;
+        n2 = bienTam;
+    }
+</script>
 </body>
 </html>
