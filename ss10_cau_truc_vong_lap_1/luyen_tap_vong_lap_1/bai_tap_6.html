@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Các Số Chia Hết cho 7</title>
+</head>
+<body>
+<script>
+    let dem = 0;
+    let total = 0;
+    let text = " ";
+    let soDo = 1;
+    while (dem < 30){
+        if (soDo % 7 === 0) {
+            text += soDo  + "   ";
+            total += soDo;
+            soDo++;
+            dem++;
+        } else {
+            soDo++
+        }
+    } document.write(text + "Tổng là: " + total);
+</script>
+</body>
+</html>
