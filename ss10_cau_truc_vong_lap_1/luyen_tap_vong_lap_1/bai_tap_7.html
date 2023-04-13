@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài Tập 7</title>
 </head>
 <body>
+<script>
+// Cách 1:
+    let i = 1;
+    for (i;i<101;i++){
+        if (i%3 === 0 && i%5 === 0){
+            document.write("FizzBuzz  ")
+        } else if (i%3 === 0){
+            document.write("Fizz  ")
+        } else if (i%5 === 0){
+            document.write("Buzz  ")
+        } else {
+            document.write(i + "  ")
+        }
+    }
 
+
+
+
+// Cách 2: Hơi dài, tốn bộ nhớ !! Không tối ưu!!
+    // let text = " ";
+    // let soDo = 1;
+    // let soDacBiet = 0
+    // while (soDo <= 100) {
+    //     if (soDo % 3 ===0 && soDo%5 === 0){
+    //         soDacBiet = "FizzBuzz";
+    //         text += soDacBiet + " ";
+    //         soDo++;
+    //     }
+    //     else if (soDo % 3 === 0) {
+    //         soDacBiet = "Fizz";
+    //         text += soDacBiet + " ";
+    //         soDo++;
+    //     } else if (soDo % 5 === 0) {
+    //         soDacBiet = "Buzz";
+    //         text += soDacBiet + " ";
+    //         soDo++
+    //     } else {
+    //         text += soDo + "  ";
+    //         soDo++
+    //     }
+    // }
+    // document.write(text);
+</script>
 </body>
 </html>
