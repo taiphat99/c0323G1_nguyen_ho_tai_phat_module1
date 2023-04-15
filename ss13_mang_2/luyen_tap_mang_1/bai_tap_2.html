@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-
+<p id="result"></p>
+<script>
+    let arr = [-2, 1, 4, 10, 15, 14.5, 555, 15.666, 50, 78,9999, 90, 190];
+    let max = 0;
+    let viTri;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            viTri = i + 1;
+        }
+    }
+    document.getElementById("result").innerHTML = " Số lớn nhất trong dãy số trên là: " + max + " Vị trí của nó đứng ở thứ: " + viTri;
+</script>
 </body>
 </html>

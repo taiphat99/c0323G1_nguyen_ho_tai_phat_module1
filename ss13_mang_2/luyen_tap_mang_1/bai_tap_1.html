@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-
+<p id="result"></p>
+<script>
+    const arr = [-2,4,5,7,10,23,10,56,129,150];
+    let dem = 0;
+    let text = "";
+    for (let i = 0; i < arr.length;i++)
+        if(arr[i] >= 10){
+            dem++;
+            text += arr[i] + " ";
+        } document.getElementById("result").innerHTML ="Tất cả có " + dem + " số lớn hơn và bằng 10. Đó là: " + text;
+</script>
 </body>
 </html>
