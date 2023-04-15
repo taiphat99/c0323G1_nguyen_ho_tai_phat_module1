@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Từ Điển</title>
 </head>
-<body>
 
+<!--Banana: Chuối-->
+<!--Apple: Táo-->
+<!--WaterMelon: Dưa Hấu-->
+<!--Orange: Cam-->
+
+<body>
+<input type="text" id="word">
+<button type="button" onclick="myFunction()">Tra Từ</button>
+<p id="result"></p>
+<script>
+    const vocab = Array('banana', 'apple', 'watermelon', 'orange');
+    const meaning = Array('chuối', 'táo', 'dưa hấu', 'cam');
+
+    function myFunction() {
+        let word = document.getElementById("word").value.toLowerCase();
+        for (let i = 0; i < vocab.length; i++) {
+            if (vocab[i] === word) {
+                document.getElementById("result").innerHTML = meaning[i];
+                break;
+            }
+        }
+    }
+
+</script>
 </body>
 </html>

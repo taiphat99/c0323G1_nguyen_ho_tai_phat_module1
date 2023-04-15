@@ -4,33 +4,21 @@
 <head>
     <meta charset=utf-8 />
     <title>JS Bin</title>
-    <style>
-        body {padding-top:50px}
-    </style>
 </head>
-
 <body>
-<input type="text" id="txtValue"/>
-<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
-<input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
-<div id="result"></div>
-
+<input type="text" id="word">
 <script>
-    let x = 0;
-    let array = Array();
-    function add_element_to_array() {
-        array[x] = document.getElementById("txtValue").value;
-        alert("Element: " + array[x] + " Added at index " + x);
-        x++;
-        document.getElementById("txtValue ").value = "";
-    }
-    function display_array() {
-        let e = "<hr/>";
-        for (let i = 0; i < array.length; i++) {
-            e += "Element " + i + " = " + array[i] + "<br/>";
-        }
-        document.getElementById("result").innerHTML = e;
-    }
+    word = document.getElementById("word").value;
+    console.log(word);
+    console.log(typeof word);
+
+    let vocab = Array('a','b','c','d');
+    console.log(vocab[0]);
+    console.log(typeof vocab[0]);
+
+    let meaning = Array('a1','b1','c1','d1');
+    console.log(meaning[0]);
+
 </script>
 
 </body>
