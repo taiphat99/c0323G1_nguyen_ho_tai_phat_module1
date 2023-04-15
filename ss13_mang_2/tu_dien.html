@@ -19,12 +19,16 @@
     const meaning = Array('chuối', 'táo', 'dưa hấu', 'cam');
 
     function myFunction() {
+        let index = 0;
         let word = document.getElementById("word").value.toLowerCase();
         for (let i = 0; i < vocab.length; i++) {
             if (vocab[i] === word) {
-                document.getElementById("result").innerHTML = meaning[i];
-                break;
+                index = i;
             }
+        } if (index === 0){
+            document.getElementById("result").innerHTML = word + " không có trong Từ Điển";
+        } else {
+            document.getElementById("result").innerHTML = meaning[index];
         }
     }
 
