@@ -6,5 +6,25 @@
 </head>
 <body>
 
+<script>
+    let arr = [];
+    while (arr.length < 10) {
+        arr.push(+prompt("Vui lòng nhập vào đây:"));
+    }
+    let soCanTim = +prompt("Vui lòng nhập số cần tìm vào đây:");
+    let dem = 0
+    for (let i = 0; i < 10; i++) {
+        if (soCanTim === arr[i]) {
+            dem++;
+        }
+    }
+    if (dem === 0) {
+        document.write(soCanTim + " is not in the Array");
+    } else {
+        document.write(soCanTim + " is in the Array");
+    }
+</script>
+
+
 </body>
 </html>

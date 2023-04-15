@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset=utf-8 />
-    <title>JS Bin</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-<input type="text" id="word">
+
 <script>
-    word = document.getElementById("word").value;
-    console.log(word);
-    console.log(typeof word);
+    function check_Integer(n){
+        //flag = 1 => là số nguyên
+        //flag = 0 => số thực
 
-    let vocab = Array('a','b','c','d');
-    console.log(vocab[0]);
-    console.log(typeof vocab[0]);
+        let flag = 0;
+        if (Math.ceil(n) === Math.floor(n)) {
+            flag = 1;
+            return flag;
+        }
+    }
 
-    let meaning = Array('a1','b1','c1','d1');
-    console.log(meaning[0]);
+    let n= prompt("Nhap so= ");
+    let check = check_Integer(n);
+    if( check === 1 ) document.write(n + " la so nguyen");
+    else document.write(n + "khong phai la so nguyen");
+    console.log(check_Integer(n));
 
 </script>
-
 </body>
-
 </html>
