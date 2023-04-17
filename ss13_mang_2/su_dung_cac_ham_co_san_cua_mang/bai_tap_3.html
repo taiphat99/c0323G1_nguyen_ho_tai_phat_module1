@@ -8,15 +8,16 @@
 <script>
     let str = prompt(" Vui lòng nhập chuỗi ký tự bạn muốn chuyển sang in hoa: ");
     let result = "";
-    for (let i = 0;i < str.length; i++){
-        if (str[i] == str[i].toLowerCase()){
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] == str[i].toLowerCase()) {
             result += str[i].toUpperCase();
-        } else if( str[i] == str[i].toUpperCase()){
+        } else if (str[i] == str[i].toUpperCase()) {
             result += str[i].toLowerCase();
         } else {
             result += str[i];
         }
-    } document.write("Đây là chuỗi ký tự bạn nhập vào! (" + str + ") Và Đây là kết quả: (" + result + ")");
+    }
+    document.write("Đây là chuỗi ký tự bạn nhập vào! (" + str + ") Và Đây là kết quả: (" + result + ")");
 </script>
 </body>
 </html>

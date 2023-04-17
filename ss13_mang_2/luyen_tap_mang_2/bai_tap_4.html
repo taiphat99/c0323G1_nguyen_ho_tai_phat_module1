@@ -6,17 +6,18 @@
 </head>
 <body>
 <script>
-    const alphabet = 'q w e r t y u i o p a s d f g h j k l z x c v b n m'
+    const alphabet = 'q w e r t y u i o p a s d f g h j k l z x c v b n m';
     let alphabetArray = alphabet.split(' ');
     let str = prompt("Vui long nhap chuoi vao day: ");
     let dem = 0;
-    for (let i=0; i<str.length;i++){
-        for (let j=0;j<alphabetArray.length; j++){
-            if (str[i].toLowerCase() === alphabetArray[j]){
+    for (let i = 0; i < str.length; i++) {
+        for (let j = 0; j < alphabetArray.length; j++) {
+            if (str[i].toLowerCase() === alphabetArray[j]) {
                 dem++;
             }
         }
-    } document.write(str + ' Ket Qua ' + dem);
+    }
+    document.write(str + ' Ket Qua ' + dem);
 </script>
 </body>
 </html>
