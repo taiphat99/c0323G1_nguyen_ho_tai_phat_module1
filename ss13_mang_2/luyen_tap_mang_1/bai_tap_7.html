@@ -8,7 +8,7 @@
 <script>
     let arr = [];
     while (arr.length < 10) {
-        arr.push(+prompt("Vui long nhap vao day: "))
+        arr.push(+prompt("Vui long nhap vao day: "));
     }
     let soCanTim = +prompt("Vui lòng nhập số cần tìm vào đây:");
     let index;
@@ -17,12 +17,10 @@
             index = i;
             arr.splice(i, 1);
             i--;
-            arr.push(0)
+            arr.push(0);
         }
     }
     document.write(arr);
-
-
 </script>
 
 
