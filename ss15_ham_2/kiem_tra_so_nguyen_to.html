@@ -6,8 +6,23 @@
 </head>
 <body>
 <script>
-    function isPrime(number){
+    function isPrime(number) {
+        let count = 0;
+        for (let i = 1; i < number; i++) {
+            if (number % i === 0) {
+                count++;
+            }
+        }
+        if (count === 1) {
+            return true;
+        }
+    }
 
+    let a = +prompt("Vui long nhap so Nguyen To ban can kiem tra:");
+    if (isPrime(a)) {
+        alert(a + " la so Nguyen To");
+    } else {
+        alert(a + " khong phai la so Nguyen To");
     }
 </script>
 </body>

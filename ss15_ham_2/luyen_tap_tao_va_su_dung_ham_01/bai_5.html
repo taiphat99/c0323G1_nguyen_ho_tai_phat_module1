@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    const arr1 = ['polaris', 'aldebaran', 'deneb', 'vega', 'altair', 'dubhe', 'regulus'];
+    const arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
 
+    function findStar(a) {
+        let dem = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            if (a.toLowerCase() === arr1[i]) {
+                alert(arr2[i])
+                dem++;
+            }
+        }
+        if (dem === 0) {
+            alert("khong tim thay sao");
+        }
+
+    }
+
+    let a = prompt("Vui long nhap chom sao ban muon tim:");
+    findStar(a);
+
+</script>
 </body>
 </html>
