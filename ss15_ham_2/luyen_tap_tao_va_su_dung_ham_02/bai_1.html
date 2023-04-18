@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Binh Phuong 1 So</title>
 </head>
 <body>
 
+<script>
+    let a = +prompt('Vui long nhap so vao day: ');
+
+    function tinhBinhPhuong(a) {
+        do {
+            if (isNaN(a)) {
+                a = +prompt('Vui long nhap lai: ');
+            } else {
+                return 'Ket qua la ' + a * a;
+            }
+        } while (true) ;
+    }
+
+    alert(tinhBinhPhuong(a));
+</script>
 </body>
 </html>

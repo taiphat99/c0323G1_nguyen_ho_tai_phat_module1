@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    const PI = 3.1415;
 
+    function dienTichHinhtron(r) {
+        return 2 * r * PI;
+    }
+
+    function chuViHinhTron(r) {
+        return r * r * PI;
+    }
+
+    let r = +prompt('Vui long nhap vao ban kinh: ');
+    do {
+        if (isNaN(r)) {
+            r = +prompt('Vui long nhap lai ban kinh');
+        } else {
+            alert('Dien Tich cua Hinh Tron la: ' + dienTichHinhtron(r));
+            alert('Chu Vi cua Hinh Tron la: ' + chuViHinhTron(r));
+            break;
+        }
+    } while (true);
+</script>
 </body>
 </html>
