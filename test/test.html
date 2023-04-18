@@ -14,20 +14,20 @@
             array[i][j]="";
         }
     }
-    let checkPalayer1= true;
+    let checkPlayer1= true;
     display();
     function play(i,j) {
-        if (checkPalayer1&&!checkData(i,j)){
+        if (checkPlayer1&&!checkData(i,j)){
             array[i][j]="X";
-            checkPalayer1 =false;
-        }else if (!checkPalayer1&&!checkData(i,j)) {
+            checkPlayer1 =false;
+        }else if (!checkPlayer1&&!checkData(i,j)) {
             array[i][j]="O";
-            checkPalayer1 =true;
+            checkPlayer1 =true;
         }
       display();
     }
     function checkData(i,j) {
-        if (array[i][j]=="X"|| array[i][j]=="O"){
+        if (array[i][j]==="X"|| array[i][j]==="O"){
             alert("Ô này đánh rồi!!!!");
             return true;
         }else {
