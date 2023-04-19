@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id='result'></p>
+<script>
+    function checkNumber(number) {
+        do if (!isNaN(number)) {
+            return number;
+        } else {
+            number = +prompt("Dữ liệu đầu vào là số. Vui lòng nhập lại!");
+        }
+        while (true);
+    }
+
+    function kiemTraMang(arr) {
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] % i !== 0) {
+                return 'NO';
+            }
+        }
+        return 'OK';
+    }
+
+    let n = checkNumber(+prompt("Vui lòng nhập độ dài của mảng vào đây:"));
+    let array = [];
+    let i = 1;
+    for (i; i <= n; i++) {
+        array.push(checkNumber(+prompt('Vui long nhap phan tu thu ' + i)));
+    }
+    document.getElementById('result').innerHTML = 'Mảng bạn nhập vào là: [' + array + ']' + '<br>' + 'Mảng này ' + kiemTraMang(array) ;
+
+
+
+</script>
+</body>
+</html>

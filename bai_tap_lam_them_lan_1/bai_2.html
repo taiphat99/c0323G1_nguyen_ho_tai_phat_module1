@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let text = prompt('Nhập phân số vào đây: ');
+    let array = text.split('');
+
+    let positionOfSlash;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === '/') {
+            positionOfSlash = i;
+            break;
+        }
+    }
+    //Tử Số
+    let newArr1 = [];
+    for (let j = 0; j < positionOfSlash; j++) {
+        newArr1.push(array[j]);
+    }
+    let tuSo = parseInt(newArr1.join(''));
+
+    //Mẫu Số
+    let newArr2 = [];
+    for (let m = positionOfSlash + 1; m < array.length; m++) {
+        newArr2.push(array[m]);
+    }
+    let mauSo = parseInt(newArr2.join(''));
+
+    // Tìm Ước Chung Lớn Nhất của 2 số
+    function UCLN(x, y) {
+        while (x !== y) {
+            if (x > y) {
+                x = x - y;
+            } else {
+                y = y - x;
+            }
+        }
+        return x;
+    }
+
+    // Kiểm tra các phần tử của 1 mảng có phải là số hay không
+
+    function checkNumber(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (isNaN(arr[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    if (mauSo === 0) {
+        document.write('Không phải là phân số!');
+    } else if (checkNumber(newArr1) && checkNumber(newArr2)) {
+        document.write((tuSo / UCLN(tuSo, mauSo)) + '/' + (mauSo / UCLN(tuSo, mauSo)));
+    } else {
+        document.write('Không phải là phân số');
+    }
+
+</script>
+</body>
+</html>
