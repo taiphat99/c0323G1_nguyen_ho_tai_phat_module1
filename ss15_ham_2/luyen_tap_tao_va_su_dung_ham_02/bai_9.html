@@ -5,6 +5,23 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function timKyTu(arr, a) {
+        let dem = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === a) {
+                dem++;
+            }
+        }
+        if (dem === 0) {
+            return -1;
+        } else return dem;
+    }
 
+    array = ['a', 'b', 'c', '*', 'a', '*', 'a'];
+    b = prompt('Vui long nhap ky tu can tim');
+    alert(timKyTu(array, b));
+
+</script>
 </body>
 </html>

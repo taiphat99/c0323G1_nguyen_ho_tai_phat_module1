@@ -5,6 +5,22 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function minOfThreeNumbers(a, b, c) {
+        arr = [a, b, c];
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
 
+    let a = +prompt(" Vui long nhap so dau tien");
+    let b = +prompt(" Vui long nhap so thu hai");
+    let c = +prompt(" Vui long nhap so thu ba");
+    alert("So be nhat la: " + minOfThreeNumbers(a, b, c));
+</script>
 </body>
 </html>

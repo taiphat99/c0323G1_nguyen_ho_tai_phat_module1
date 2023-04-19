@@ -5,6 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function swap(a, b) {
+        let tam = a;
+        a = b;
+        b = tam;
+        return [a, b];
+    }
 
+    let a = +prompt(" Nhap so thu nhat");
+    let b = +prompt(" Nhap so thu hai");
+    result = swap(a, b);
+    a = result[0];
+    b = result[1];
+    alert('So thu nhat la: ' + a);
+    alert('So thu hai la: ' + b);
+</script>
 </body>
 </html>

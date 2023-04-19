@@ -5,6 +5,33 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function kiemTraSoNguyen(number) {
+        do if (!isNaN(number)) {
+            return number;
+        } else {
+            number = +prompt("Vui long nhap lai");
+        }
+        while (true);
+    }
 
+    function reverseArray(arr) {
+        for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+            let tam = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = tam;
+        }
+    }
+
+    let a = kiemTraSoNguyen(+prompt("Vui long nhap do dai cua mang"));
+    let array = [];
+    let i = 1;
+    for (i; i <= a; i++) {
+        array.push(kiemTraSoNguyen(+prompt('Vui long nhap phan tu thu ' + i)));
+    }
+    alert(array);
+    reverseArray(array);
+    alert(array);
+</script>
 </body>
 </html>

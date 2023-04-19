@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function checkSoNguyenDuong(a) {
+        if (a > 0 && Math.ceil(a) === Math.floor(a)) {
+            return true;
+        }
+        return false;
+    }
 
+    a = +prompt("Vui long nhap so can kiem tra:");
+    alert(checkSoNguyenDuong(a));
+</script>
 </body>
 </html>
