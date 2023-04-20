@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html>
 <body>
+
+<h2>JavaScript Objects</h2>
+<p>Object.values() converts an object to an array.</p>
+
+<p id="demo"></p>
+
 <script>
+    const person = {
+        name: "John",
+        age: 30,
+        city: "New York"
+    };
 
-
-    function checkNumber(arr) {
-        for (let i = 0; i < arr.length; i++) {
-            if (isNaN(arr[i])) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    let arr1 = [1, 'a'];
-    checkNumber(arr1);
-    console.log(checkNumber(arr1));
-
+    console.log(Object.values(person));
 </script>
+
 </body>
 </html>

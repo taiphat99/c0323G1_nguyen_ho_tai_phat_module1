@@ -27,12 +27,10 @@
 
     let n = checkNumber(+prompt("Vui lòng nhập độ dài của mảng vào đây:"));
     let array = [];
-    let i = 1;
-    for (i; i <= n; i++) {
+    for (let i = 1; i <= n; i++) {
         array.push(checkNumber(+prompt('Vui long nhap phan tu thu ' + i)));
     }
-    document.getElementById('result').innerHTML = 'Mảng bạn nhập vào là: [' + array + ']' + '<br>' + 'Mảng này ' + kiemTraMang(array) ;
-
+    document.getElementById('result').innerHTML = 'Mảng bạn nhập vào là: [' + array + ']' + '<br>' + 'Mảng này ' + kiemTraMang(array);
 
 
 </script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p></p>
+<canvas id="myCanvas"></canvas>
+<script>
+
+    class Rectangle {
+        constructor(x, y) {
+            this.width = x;
+            this.height = y;
+        }
+
+        // setWidth(width) {
+        //     this.width = width;
+        // }
+        //
+        // setHeight(height) {
+        //     this.height = height;
+        // }
+
+        area() {
+            document.write('<br/> Dien Tich hinh chu nhat la: ' + this.width * this.height);
+        }
+
+        perimeter() {
+            document.write('<br/> Chu Vi hinh chu nhat la: ' + (this.width + this.height) * 2);
+        }
+
+        draw() {
+            let canvas = document.getElementById("myCanvas");
+            let ctx = canvas.getContext("2d");
+            ctx.fillStyle = "blue";
+            ctx.fillRect(10, 10, this.width, this.height);
+        }
+    }
+
+    let rectangle = new Rectangle(500, 250);
+    // let rectangle = new Rectangle();
+    // rectangle.setWidth(500);
+    // rectangle.setHeight(250);
+    rectangle.area();
+    rectangle.perimeter();
+    rectangle.draw();
+</script>
+</body>
+</html>
