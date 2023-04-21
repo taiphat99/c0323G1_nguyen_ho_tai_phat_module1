@@ -8,18 +8,19 @@
 <p id="result"></p>
 <script>
     class Fruit {
-        constructor(weight, name) {
-            this.weight = weight;
-            this.name = name;
+        constructor(khoiLuong, ten) {
+            this.weight = khoiLuong;
+            this.name = ten;
         }
-        getName (name){
+        getName (){
             return this.name;
         }
-        getWeightOfFruit(weight) {
+        getWeightOfFruit() {
             return this.weight;
         }
 
-        decrease(weight) {
+
+        decrease() {
             return this.weight--;
         }
     }
@@ -62,33 +63,30 @@
 
     let adam = new Human('Adam', 'Male', 65);
     let eva = new Human('Eva', 'Female', 45);
-    let apple = new Fruit(10);
-    let melon = new Fruit(15);
+    let apple = new Fruit(15,'Táo');
+    let melon = new Fruit(5,'Dưa');
 
-    adam.setGender(true);
     eatFruit(adam,eva,apple);
-    eatFruit(adam,eva,melon);
+    // eatFruit(adam,eva,melon);
 
 
     function eatFruit(person1, person2, fruit) {
 
-        let
-
-            string = '';
-        for (fruit.getWeightOfFruit();fruit.getWeightOfFruit()  > 0; i--) {
+        let string = '';
+        for (let i = fruit.getWeightOfFruit();fruit.getWeightOfFruit()  > 0; i--) {
 
             if (i % 2 === 0) {
-                string += adam.getName() + adam.eatFruit(apple) + '<br/>';
-                apple.decrease();
+                string += adam.getName() + adam.eatFruit(fruit) + '<br/>';
+                fruit.decrease();
                 adam.weightUp();
-                string += 'Quả Táo còn: ' + apple.getWeightOfFruit() + ' đơn vị <br/>';
+                string += 'Quả ' + fruit.getName() + ' còn: ' + fruit.getWeightOfFruit() + ' đơn vị <br/>';
                 string += 'Cân nặng của ' + adam.getName() + ' là: ' + adam.getWeightOfHuman() + '<br/>';
 
             } else {
-                string += eva.getName() + eva.eatFruit(melon) + '<br/>';
-                apple.decrease();
+                string += eva.getName() + eva.eatFruit(fruit) + '<br/>';
+                fruit.decrease();
                 eva.weightUp();
-                string += 'Quả Táo còn: ' + apple.getWeightOfFruit() + ' đơn vị <br/>';
+                string += 'Quả ' + fruit.getName() +' còn: ' + fruit.getWeightOfFruit() + ' đơn vị <br/>';
                 string += 'Cân nặng của ' + eva.getName() + ' là: ' + eva.getWeightOfHuman() + '<br/>';
 
             }
