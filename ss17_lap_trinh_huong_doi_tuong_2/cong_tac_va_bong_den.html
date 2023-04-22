@@ -2,58 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Công tắc và bóng đèn</title>
 </head>
 <body>
-<p id="result"></p>
 <script>
-
-    class ElectricLamp{
-        constructor(status) {
-            this.status = status;
-        }
-        getStatus(){
-            return this.status;
-        }
-    }
-
-    class SwitchButton{
-        constructor(lamp, status) {
-            this.status = status;
-            this.lamp = lamp;
-        }
-        getLamp(){
-            return this.lamp;
+    class Button {
+        constructor() {
+            this.status = false;
         }
 
-        setLamp(lamp){
-            this.lamp = lamp;
+        connectToLamp(lamp) {
+            lamp.status = this.status;
         }
 
-        connectToLamp(Electriclamp){
-            return this.lamp = Electriclamp;
+        switchOff() {
+            if (this.status === true) {
+                this.status = false;
+                lamp.turnOff();
+            }
         }
 
-        switchOff(){
-            this.lamp.status = false;
-            return this.status = false;
-        }
-
-        switchOn(){
-            this.lamp.status = true;
-            return this.status = true;
+        switchOn() {
+            if (this.status === false) {
+                this.status = true;
+                lamp.turnOn();
+            }
         }
     }
 
+    class Lamp {
+        constructor() {
+            this.status = false;
+        }
 
-    let electricLamp_1 = new ElectricLamp(false);
+        turnOff() {
+            if (this.status === true) {
+                alert('DARK');
+                this.status = false;
+            }
+        }
 
-    let switchButton_1 = new SwitchButton(electricLamp_1,false); // kết nối giữa  công tắc 1 và đèn 1
+        turnOn() {
+            if (this.status === false) {
+                alert('LIGHT');
+                this.status = true;
+            }
+        }
+    }
 
-    console.log(switchButton_1.switchOn());
-    console.log(electricLamp_1.getStatus());
-    console.log(switchButton_1.switchOff());
-    console.log(electricLamp_1.getStatus());
+    let button = new Button();
+    let lamp = new Lamp();
+    button.connectToLamp(lamp);
+    for (let i = 0; i < 10; i++) {
+        button.switchOn();
+        button.switchOff();
+    }
 
 </script>
 </body>
