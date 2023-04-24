@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = ['o', 'u', 'i', 'a', 'e'];
+    let a = prompt('Vui lòng nhập ký tự cần kiểm tra:');
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (a.toLowerCase() === array[i]) {
+            count++;
+        }
+    }
+    if (count === 1) {
+        alert(a + ' là nguyên âm');
+    } else {
+        alert(a + ' là phụ âm');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Account</title>
+</head>
+<body>
+<button type="button" id="deposit">Nạp Tiền</button>
+<button type="button" id="withdraw">Rút Tiền</button>
+<button type="button" id="addAccount">Thêm Khách Hàng</button>
+<button type="button" id="editAccount">Sửa Thông Tin Khách Hàng</button>
+<p id ='result'></p>
+
+
+
+
+
+<script>
+    class Account {
+        constructor(id, name, balance) {
+            this.id = id;
+            this.name = name;
+            this.balance = balance;
+        }
+        getId(){
+            return this.id;
+        }
+        setId(id){
+            this.id = id;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(name){
+            this.name = name;
+        }
+        getBalance(){
+            return this.balance;
+        }
+        setBalance(balance){
+            this.balance = balance;
+        }
+
+        toString(){
+            return 'Tài khoản số: ' + this.getId() + '<br/>' + ' Tên tài khoản: ' + this.getName() + '<br/>' + ' Số tiền trong tài khoản: ' + this.getBalance();
+        }
+
+        deposit(number){
+            return this.balance = number + this.getBalance();
+        }
+        withdraw(number){
+            if (this.balance <= 0){
+                return alert(' You are broke');
+            } else if (this.balance < number){
+                return alert('You don\'t have enough money to deposit! ');
+            } else {
+                return this.balance = this.getBalance() - number;
+            }
+        }
+    }
+
+    let acc1 = new Account('MS1','Danny Nguyen',68000);
+    let acc2 = new Account('MS2','Ned Nguyen',60000);
+    let acc3 = new Account('MS3','Tony Guy',150000);
+    let acc4 = new Account('MS4','Gorge Wellington',100000);
+    let acc5 = new Account('MS5','Tom n Jerry',1500000);
+    let array = [];
+    array.push(acc1,acc2,acc3,acc4,acc5);
+
+    function display() {
+        let table = '<table border="1" style="border-collapse: collapse">\n' +
+            '    <tr>\n' +
+            '        <th width="80px"> STT </th>\n' +
+            '        <th width="268px"> Số Tài Khoản </th>\n' +
+            '        <th width="300px"> Tên Chủ Tài Khoản </th>\n' +
+            '        <th colspan="2" width="400px"> Số Tiền Trong Tài Khoản</th>\n' +
+            '    </tr>'
+
+        for (let i = 0; i < array.length; i++){
+
+        }
+        table += '</table>'
+        document.getElementById('result').innerHTML = table;
+    }
+    display();
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let h = +prompt('Vui lòng nhập chiều cao của tam giác: ');
+    let array = new Array(h);
+    let text = '';
+    for (let i = 0; i < h; i++) {
+        array[i] = new Array(h);
+        for (let j = 0; j < h; j++) {
+            if (j === 0 || i === h - 1 || i === j) {
+                text += array[i][j] = '*';
+            } else {
+                text += '&nbsp;&nbsp;';
+            }
+        }
+        text += '<br/>';
+    }
+    document.write(text);
+</script>
+</body>
+</html>

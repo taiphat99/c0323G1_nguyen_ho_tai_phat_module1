@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="result"></p>
+<script>
+
+    let a = +prompt('Vui lòng nhập lương của bạn vào đây (VNĐ): ');
+    let laiSuat;
+    if (a > 0) {
+        if (a < 7000000) {
+            laiSuat = 0.05;
+        } else if (a >= 7000000 && a <= 15000000) {
+            laiSuat = 0.1;
+        } else {
+            laiSuat = 0.2;
+        }
+    } else {
+        a = +prompt('Vui lòng nhập lương của bạn vào đây (VNĐ):');
+    }
+    let tienThue = a * laiSuat;
+    let luongRong = a - tienThue;
+    document.getElementById('result').innerHTML = 'Mức Lương: ' + a + ' VNĐ ' + '<br/>' + 'Tiền Thuế phải đóng: ' + tienThue + ' VNĐ ' + '<br/>' + 'Lương Ròng của bạn là: ' + luongRong + ' VNĐ ';
+</script>
+</body>
+</html>

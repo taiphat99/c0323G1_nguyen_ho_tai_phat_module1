@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [2, 3, 6, 8, 4];
+    let b = [4, 5, 3, 6, 8, 0, 9, 7];
+    let c = [];
+
+    for (let i = 0; i < b.length; i++) {
+        let count = 0;
+        for (let j = 0; j<a.length;j++){
+            if (b[i] === a[j]){
+                count++;
+            }
+        } if (count ===0){
+            c.push(b[i]);
+        }
+    }
+    console.log(c);
+</script>
+
+</body>
+</html>

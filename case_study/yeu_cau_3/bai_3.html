@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id = 'result'></p>
+<script>
+    let tuSo = [2, 5, 7, 4];
+    let mauSo = [3, 5, 2, 8];
+    let x = 0;
+    let max = (tuSo[0] / mauSo[0]);
+    for (let i = 1; i < tuSo.length; i++) {
+        if ((tuSo[i] / mauSo[i]) > max) {
+            max = (tuSo[i] / mauSo[i]);
+            x = i;
+        }
+    }
+    document.getElementById('result').innerHTML = 'Phân số lớn nhất là: ' + tuSo[x] + '/' + mauSo[x] + '<br/>' + ' Ở vị trí thứ: ' + x;
+</script>
+
+</body>
+</html>
