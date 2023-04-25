@@ -8,12 +8,19 @@
 <script>
     m = +prompt('Vui long nhap chieu cao');
     n = +prompt('Vui long nhap chieu rong');
-
-    for (let i=0; i<m;i++){
-        for (let j=0;j<n;j++){
-
+    let array = new Array(m);
+    let sum = 0;
+    for (let i = 0; i < m; i++) {
+        array[i] = new Array(n);
+        for (let j = 0; j < n; j++) {
+            array[i][j] = Math.floor(Math.random() * 10);
+            if (array[i][j] % 2 === 0) {
+                sum += array[i][j];
+            }
         }
     }
+    console.log(array);
+    console.log(sum);
 </script>
 </body>
 </html>

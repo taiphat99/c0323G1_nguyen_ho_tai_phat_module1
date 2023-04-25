@@ -5,6 +5,31 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    m = +prompt('Vui long nhap chieu cao');
+    n = +prompt('Vui long nhap chieu rong');
+    let array = new Array(m);
+    for (let i = 0; i < m; i++) {
+        array[i] = new Array(n);
+        for (let j = 0; j < n; j++) {
+            array[i][j] = Math.floor(Math.random() * 20);
+        }
+    }
+    let max = array[0][0];
+    let min = array[0][0];
+    for (let i=0;i<array.length;i++){
+        for (let j = 0;j<array[i].length;j++){
+            if (array[i][j] > max){
+                max = array[i][j];
+            }
+            if (array[i][j]<min){
+                min = array[i][j];
+            }
+        }
+    }
+    console.log(array);
+    console.log(max);
+    console.log(min);
+</script>
 </body>
 </html>
