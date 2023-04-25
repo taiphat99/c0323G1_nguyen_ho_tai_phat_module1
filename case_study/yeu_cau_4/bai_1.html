@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 'NguYen  HO tai  Nhunggg  pHat';
+    a = a.toLowerCase();
+    let array1 = a.split(' ');
+    let array2 = [];
+    for (let i = 0; i < array1.length; i++) {
+        if (array1[i] !== '') {
+            array2.push(array1[i]);
+        }
+    }
+    let finalArray = [];
+    let t;
+    let max = 0;
+    for (let j = 0; j < array2.length; j++) {
+        let newArray = array2[j].split('');
+        newArray[0] = newArray[0].toUpperCase();
+        finalArray.push(newArray.join(''));
+        if (finalArray[j].length > max) {
+            max = finalArray[j].length;
+            t = finalArray[j];
+        }
+    }
+    console.log(finalArray);
+    console.log(max, t);
+
+
+</script>
+</body>
+</html>

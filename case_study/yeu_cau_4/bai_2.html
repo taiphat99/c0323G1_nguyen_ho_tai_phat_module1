@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 'abacbcdefeffeff'
+    let array = a.split('');
+    for (let i = 0; i < array.length; i++) {
+        let j = i + 1;
+        for (j; j < array.length; j++) {
+            if (array[i] === array[j]) {
+                array.splice(j, 1);
+                j--;
+            }
+        }
+    }
+    console.log(array);
+</script>
+</body>
+</html>
