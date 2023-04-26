@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    let a = 'NguYen  HO tai  Nhunggg  pHat';
+    let a = 'NguYen  HO tai   pHat QUenhh';
     a = a.toLowerCase();
     let array1 = a.split(' ');
     let array2 = [];
@@ -27,8 +27,14 @@
             t = finalArray[j];
         }
     }
+    let x = '';
+    for (let k = 0; k < finalArray.length; k++) {
+        if (finalArray[k].length === max) {
+            x += finalArray[k] + '  ';
+        }
+    }
     console.log(finalArray);
-    console.log(max, t);
+    console.log(max, x);
 
 
 </script>

@@ -9,17 +9,20 @@
     let h = +prompt('Vui lòng nhập chiều cao của tam giác:');
     let x = h + (h - 1);
     let text = '';
-    let array = new Array(x);
-    for (let i = 0; i < x; i++) {
+    let array = new Array(h);
+    let t=0;
+    for (let i = 0; i < h; i++) {
         array[i] = new Array(x);
         for (let j = 0; j < x; j++) {
-            if (i === (h - 1) || i + j === (h - 1) || j - i === (h - 1)) {
+            if ((j >= ((h - 1) - t) ) && (j <= ((h - 1) + t))) {
                 text += array[i][j] = '*';
             } else {
-                text += array[i][j] = '&nbsp;&nbsp;';
+                text += array[i][j] = '&nbsp&nbsp';
             }
         }
-        text += '<br/>';
+        t += 1;
+
+        text += '<br>';
     }
     document.write(text);
 </script>

@@ -13,8 +13,7 @@
     let count = 0;
     let text = '';
     for (let i = 0; i < a.length; i++) {
-        let j = 0;
-        for (j; j < b.length; j++) {
+        for (let j = 0; j < b.length; j++) {
             if (arr1[i] === arr2[j]) {
                 let t = arr2.splice(j, 1);
                 count++;
@@ -24,6 +23,7 @@
             }
         }
     }
+
     console.log(count);
     console.log(text);
 </script>

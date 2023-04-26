@@ -18,7 +18,7 @@
             this.stt = stt;
             this.soTaiKhoan = soTaiKhoan;
             this.tenTaiKHoan = tenTaiKHoan;
-            this.tienTaiKHoang = tienTaiKhoan;
+            this.tienTaiKhoan = tienTaiKhoan;
 
         }
 
@@ -35,7 +35,7 @@
         }
 
         getTienTaiKHoang() {
-            return this.tienTaiKHoang;
+            return this.tienTaiKhoan;
         }
 
         setStt(stt) {
@@ -51,13 +51,13 @@
         }
 
         setTienTaiKHoang(tienTaiKHoan) {
-            this.tienTaiKHoang = tienTaiKHoan;
+            this.tienTaiKhoan = tienTaiKHoan;
         }
     }
 
-    let khachHang1 = new Account( '','MK01', 'Võ Nhân Trí', 525000);
-    let khachHang2 = new Account( '','MK02', 'Mã Văn Tài', 225000);
-    let khachHang3 = new Account( '','MK03', 'Nguyễn Tấn Dũng', 425000);
+    let khachHang1 = new Account( '','MK01', 'Tài Phát ', 525000);
+    let khachHang2 = new Account( '','MK02', 'Sơn Tùng MCK', 225000);
+    let khachHang3 = new Account( '','MK03', 'Snoop Dog', 425000);
     let arr = [];
     arr.push(khachHang1, khachHang2, khachHang3);
 
@@ -72,7 +72,7 @@
     //
     // alert(toString());
 
-    function account() {
+    function display() {
         let taoBang = '<table border="1" style="text-align: center">\n' +
             '    <tr>\n' +
             '        <th>STT</th>\n' +
@@ -94,15 +94,15 @@
         document.getElementById('id').innerHTML = taoBang;
     }
 
-    account();
+    display();
 
     function guiTien() {
         let taiKhoanGui = prompt("nhập số tài khoản muốn gửi tiền");
-        let tienGui = prompt("nhập số tiền muốn gửi") * 1;
+        let tienGui = +prompt("nhập số tiền muốn gửi");
         let gui = confirm("bạn có chắc muốn thêm:" + ' ' + tienGui + ' ' + "cho tài khoản:" + ' ' + taiKhoanGui);
         if (gui) {
             for (let i = 0; i < arr.length; i++) {
-                if (taiKhoanGui == arr[i].getSoTaiKhoan()) {
+                if (taiKhoanGui === arr[i].getSoTaiKhoan()) {
                     let tong = arr[i].getTienTaiKHoang() + tienGui;
                     arr[i].setTienTaiKHoang(tong);
                 }
@@ -110,16 +110,16 @@
         } else {
             alert('cảm ơn quý khách');
         }
-        account();
+        display();
     }
 
     function rutTien() {
         let taiKhoanGui = prompt("nhập số tài khoản muốn rút tiền");
-        let tienRut = prompt("nhập số tiền muốn rút");
+        let tienRut = +prompt("nhập số tiền muốn rút");
         let rut = confirm("bạn có chắc muốn rút:" + ' ' + tienRut + ' ' + "từ tài khoản:" + ' ' + taiKhoanGui);
         if (rut) {
             for (let i = 0; i < arr.length; i++) {
-                if (taiKhoanGui == arr[i].getSoTaiKhoan()) {
+                if (taiKhoanGui === arr[i].getSoTaiKhoan()) {
                     if (tienRut <= arr[i].getTienTaiKHoang()) {
                         let hieu = arr[i].getTienTaiKHoang() - tienRut;
                         arr[i].setTienTaiKHoang(hieu);
@@ -135,7 +135,7 @@
         } else {
             alert('Cảm ơn quý khách');
         }
-        account();
+        display();
     }
 
     function them() {
@@ -144,7 +144,7 @@
         let tienTaiKhoan = prompt("nhập tiền tài khoản");
         let themTaiKhoan = new Account('',soTaiKhoan, tenTaiKhoan, tienTaiKhoan);
         arr.push(themTaiKhoan);
-        account();
+        display();
     }
 
     function xoa(maMuonXoa) {
@@ -162,13 +162,13 @@
         } else {
             alert('không xóa');
         }
-        account();
+        display();
     }
 
     function sua(maMuonSua) {
         maMuonSua = prompt("nhập mã muốn sửa");
         for (let i = 0; i < arr.length; i++) {
-            if (maMuonSua == arr[i].getSoTaiKhoan()) {
+            if (maMuonSua === arr[i].getSoTaiKhoan()) {
                 let soTaiKhoan1 = prompt('bạn muốn sữa số tài khoản thành:');
                 let tenTaiKhoan1 = prompt('bạn muốn sữa tên tài khoản thành:');
                 let tienTaiKhoan1 = prompt('bạn muốn sữa số tiền trong tài khoản thành:');
@@ -180,7 +180,7 @@
                 alert("Mã Bạn Nhập Không Có Trong Hệ Thống");
             }
         }
-        account();
+        display();
     }
 </script>
 </body>

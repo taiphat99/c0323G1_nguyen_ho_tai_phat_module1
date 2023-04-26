@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh Sách Học Viên</title>
+</head>
+<style>
+    table, th, tr, td {
+        text-align: center;
+        border-collapse: collapse;
+        border: 1px solid black;
+        padding: 15px;
+
+    }
+</style>
+<body>
+<button type="button" onclick="themHocVien()">Thêm Mới Học Viên</button>
+<button type="button" onclick="suaThongTin()">Sửa Thông Tin Học Viên</button>
+<button type="button" onclick="xoaHocVien()">Xoá Học Viên</button>
+<br>
+
+<p id="result"></p>
+<script>
+
+    class HocVien {
+        constructor(maHocVien, ten, lop, email, ngaySinh) {
+            this.maHocVien = maHocVien;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.ngaySinh = ngaySinh;
+        }
+
+        getStt() {
+            return this.stt;
+        }
+
+        setStt(value) {
+            this.stt = value;
+        }
+
+        getMaHocVien() {
+            return this.maHocVien;
+        }
+
+        setMaHocVien(value) {
+            this.maHocVien = value;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        setTen(value) {
+            this.ten = value;
+        }
+
+        getLop() {
+            return this.lop;
+        }
+
+        setLop(value) {
+            this.lop = value;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        setEmail(value) {
+            this.email = value;
+        }
+
+        getNgaySinh() {
+            return this.ngaySinh;
+        }
+
+        setNgaySinh(value) {
+            this.ngaySinh = value;
+        }
+    }
+
+    let hv1 = new HocVien('MS1', 'Danny Hell', 'C0323G1', 'Taiphatlqd@gmail.com', '19/09/1999');
+    let hv2 = new HocVien('MS2', 'Ned Nguyen', 'C0123G1', 'NedNoobBoy@gmail.com', '07/10/1992');
+    let hv3 = new HocVien('MS3', 'Tony Young', 'C0423G1', 'Tonyhell98@gmail.com', '12/09/1998');
+
+    console.log(hv1, hv2, hv3);
+    let arr = [hv1, hv2, hv3];
+
+    function display() {
+        let table = '';
+        table += '<table border="1"  style="border-collapse: collapse; text-align: center"  >\n' +
+            '    <tr>\n' +
+            '        <th>Mã Học Viên</th>\n' +
+            '        <th>Tên</th>\n' +
+            '        <th>Lớp</th>\n' +
+            '        <th>Email</th>\n' +
+            '        <th>Ngày Sinh</th>\n' +
+            '    </tr>\n';
+        for (let i = 0; i < arr.length; i++) {
+            table += '    <tr>\n' +
+                '        <td>' + arr[i].getMaHocVien() + '</td>\n' +
+                '        <td>' + arr[i].getTen() + '</td>\n' +
+                '        <td>' + arr[i].getLop() + '</td>\n' +
+                '        <td>' + arr[i].getEmail() + '</td>\n' +
+                '        <td>' + arr[i].getNgaySinh() + '</td>\n' +
+                '    </tr>\n';
+        }
+        table += '</table>';
+        document.getElementById('result').innerHTML = table;
+    }
+
+    display();
+
+    function themHocVien() {
+        let maHocVien = prompt('Vui lòng nhập mã học viên');
+        let ten = prompt('Vui lòng nhập tên học viên');
+        let lop = prompt('Vui lòng nhập tên lớp');
+        let email = prompt('Vui lòng nhập email của học viên');
+        let ngaySinh = prompt('Vui lòng nhập ngày sinh của học viên');
+        let hv = new HocVien(maHocVien,ten,lop,email,ngaySinh);
+        arr.push(hv);
+        display();
+    }
+    function suaThongTin() {
+
+    }
+
+    function xoaHocVien() {
+
+    }
+</script>
+</body>
+</html>
