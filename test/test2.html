@@ -152,7 +152,7 @@
         let xoa = confirm("Bạn có chắc muốn xóa" + ' ' + maMuonXoa);
         if (xoa) {
             for (let i = 0; i < arr.length; i++) {
-                if (maMuonXoa == arr[i].getSoTaiKhoan()) {
+                if (maMuonXoa === arr[i].getSoTaiKhoan()) {
                     arr.splice(i, 1);
                     break;
                 }else {

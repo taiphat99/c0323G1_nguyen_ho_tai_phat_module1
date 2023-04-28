@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Nhập 3 số nguyên dương a,b và c. Sau đó in ra ước chung lớn nhất và bội chung nhỏ nhất của 3 số nguyên dương a và b đó.
+    let a = +prompt('Vui long nhap a:');
+    let b = +prompt('Vui long nhap b:');
+    let c = +prompt('Vui long nhap c:');
+
+    function maximum(a, b, c) {
+        if (a > b && a > c) {
+            return a;
+        } else if (b > c) {
+            return b;
+        } else {
+            return c;
+        }
+    }
+
+    function minimum(a, b, c) {
+        if (a < b && a < c) {
+            return a;
+        } else if (b < c) {
+            return b;
+        } else {
+            return c;
+        }
+    }
+
+    function UCLN(a, b, c) {
+        let UCLN = 1;
+        // Tim Uoc chung lon nhat
+        for (let i = 1; i <= minimum(a, b, c); i++) {
+            if (a % i === 0 && b % i === 0 && c % i === 0) {
+                UCLN = i;
+            }
+        }
+        return UCLN;
+    }
+
+    // Tim Boi Chung Nho Nhat
+    function BCNN(a, b, c) {
+        let BCNN = 1;
+        let j = maximum(a, b, c);
+        while (true) {
+            if (j % a === 0 && j % b === 0 && j % c === 0) {
+                BCNN = j;
+                break;
+            }
+            j++;
+        }
+        return BCNN;
+    }
+
+    console.log(UCLN(a,b,c), BCNN(a,b,c));
+</script>
+</body>
+</html>

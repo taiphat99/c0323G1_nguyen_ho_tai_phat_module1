@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    m = +prompt('Vui long nhap chieu cao');
+    n = +prompt('Vui long nhap chieu cao');
     n = +prompt('Vui long nhap chieu rong');
     let array = new Array(m);
     for (let i = 0; i < m; i++) {
@@ -15,8 +15,8 @@
             array[i][j] = Math.floor(Math.random() * 20);
         }
     }
-    let max = array[0][0];
-    let min = array[0][0];
+    let UCLN = array[0][0];
+    let BCNN = array[0][0];
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array[i].length; j++) {
             if (array[i][j] > max) {

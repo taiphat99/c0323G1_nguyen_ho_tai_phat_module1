@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Tính n!	=	1*3*5*…..*n(n lẽ)
+    let n = +prompt('Vui long nhap n:');
+
+    let result = 1;
+    let text = '1';
+    for (let i = 3; i <= n; i++) {
+        result *= i;
+        text += ' * ' + i;
+        i++;
+    }
+
+    document.write(text + ' = ' + result);
+
+</script>
+</body>
+</html>

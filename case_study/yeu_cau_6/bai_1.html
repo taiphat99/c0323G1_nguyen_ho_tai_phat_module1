@@ -118,16 +118,52 @@
         let lop = prompt('Vui lòng nhập tên lớp');
         let email = prompt('Vui lòng nhập email của học viên');
         let ngaySinh = prompt('Vui lòng nhập ngày sinh của học viên');
-        let hv = new HocVien(maHocVien,ten,lop,email,ngaySinh);
+        let hv = new HocVien(maHocVien, ten, lop, email, ngaySinh);
         arr.push(hv);
         display();
     }
-    function suaThongTin() {
 
+    function suaThongTin() {
+        let maMuonSua = prompt('Vui lòng nhập mã học viên bạn muốn sửa thông tin');
+        let dieuKien = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (maMuonSua === arr[i].getMaHocVien()) {
+                dieuKien = true;
+                let maMoi = prompt('Vui lòng nhập  mã học viên mới vào đây');
+                let tenMoi = prompt('Vui lòng nhập tên học viên mới vào đây');
+                let lopMoi = prompt('Vui lòng nhập lớp học viên mới vào đây');
+                let emailMoi = prompt('Vui lòng nhập email học viên mới vào đây');
+                let ngaySinhMoi = prompt('Vui lòng nhập ngày sinh học viên mới vào đây');
+                arr[i].setMaHocVien(maMoi);
+                arr[i].setTen(tenMoi);
+                arr[i].setLop(lopMoi);
+                arr[i].setEmail(emailMoi);
+                arr[i].setNgaySinh(ngaySinhMoi);
+                display();
+            }
+        }
+        if (!dieuKien) {
+            alert('Không tìm thấy học viên!');
+        }
     }
 
-    function xoaHocVien() {
-
+    function xoaHocVien(maMuonXoa) {
+        maMuonXoa = prompt('Vui lòng nhập mã học viên bạn muốn xoá');
+        let conf = confirm(' Bạn có chắc muốn xoá học viên này không?');
+        let dieuKien = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (maMuonXoa === arr[i].getMaHocVien()) {
+                if (conf) {
+                    arr.splice(i, 1);
+                    display();
+                    dieuKien = true;
+                    break;
+                }
+            }
+        }
+        if (!dieuKien) {
+            alert('Không tìm thấy học viên!');
+        }
     }
 </script>
 </body>

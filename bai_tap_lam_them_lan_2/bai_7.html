@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // Nhập từ bàn phím mảng số nguyên gồm n phần tử (n<=50). Hiển thị ra màn hình danh sách các phần tử của mảng,
+    // --> Hiển thị giá trị trung bình của các phần tử chia hết cho 5 ở vị trí chia hết cho 3 ( phần tử có index chia hết cho 3)
+    // Ví dụ: [15,2,3,5,10,15,7,8,9,10]. Kết quả sau khi thực hiện là: (15+5+10)/3) = 10
+
+    let str = prompt('Vui long nhap mang so nguyen:');
+    array = str.split(' ');
+    console.log(array);
+    let sum = 0;
+    for (let i = 0; i < array.length; i += 3) {
+        if (array[i] % 5 === 0) {
+            sum += array[i]*1;
+        }
+    }
+    console.log(sum);
+</script>
+
+</body>
+</html>
