@@ -9,9 +9,41 @@
     // Viết hàm có tham số truyền vào là một mảng ,tìm các số fibonaci có trong mảng(số này đã làm bài tập ở jame)
     // Hàm trả về 1 mảng số fibonaci được tìm thấy trong mảng ( Yêu cầu sắp xếp tăng dần).
     // Gợi ý đây là dãy số fibonaci: 0,1,1,2,3,5,8,13,21,…..
-        // Ví dụ: Số đầu vào [1,5,6,13,9,12,8,0,5,1] --> Kết quả [0,1,1,5,5,8,13]
+    // Ví dụ: Số đầu vào [1,5,6,13,9,12,8,0,5,1] --> Kết quả [0,1,1,5,5,8,13]
+    // function soFibonanci(max) {
 
+    let array = [1, 5, 6, 13, 3, 5, 9, 12, 8, 21, 22];
 
+    function sapXep(arr) {
+        arr.sort(function (a, b) {
+            return a - b;
+        })
+    }
+
+    sapXep(array);
+    console.log(array);
+    let n1 = 0;
+    let n2 = 1;
+    let bienTam = 0;
+    let arr = [];
+    while (bienTam <= array[array.length - 1]) {
+        bienTam = n1 + n2;
+        arr.push(n1);
+        n1 = n2;
+        n2 = bienTam;
+    }
+    arr.push(n1);
+    console.log(arr);
+    let finalArray = [];
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (array[i] === arr[j]) {
+                finalArray.push(array[i]);
+                break;
+            }
+        }
+    }
+    console.log(finalArray);
 </script>
 </body>
 </html>
